@@ -4,6 +4,9 @@
     {
         static void Main(string[] args)
         {
+            bool dongu;
+            do
+            {
             // Console ToDo Uygulamasi
             Console.WriteLine("Lutfen yapmak istediginiz islemi seciniz");
             MenuGoster();
@@ -40,7 +43,21 @@
 
                 Console.WriteLine("Lutfen gecerli bir deger girin"); ;
             }
-          
+            Console.WriteLine("Uygulamadan cikmak istiyor musunuz e/h");
+                char tercih;
+                
+                tercih = Convert.ToChar(Console.ReadLine());
+                if ( tercih == 'e')
+                {
+                    dongu = true;
+                }
+                else 
+                {
+                    dongu= false;
+                }
+
+            } while (dongu);
+
 
         }    
         public static void MenuGoster()
